@@ -13,26 +13,26 @@ class SILab2Test {
 
     @Test
     void everyStatementandTest(){
-        RuntimeException ex;
+        IllegalArgumentException e;
 
-        ex = assertThrows(RuntimeException.class, ()->SILab2.function(createList()));
-        assertTrue(ex.getMessage().contains("List length should be greater than 0"));
+        e = assertThrows(IllegalArgumentException.class, ()->SILab2.function(createList()));
+        assertTrue(e.getMessage().contains("List length should be greater than 0"));
 
-        ex= assertThrows(RuntimeException.class, ()-> SILab2.function(createList("0", "#", "0")));
-        assertTrue(ex.getMessage().contains("List length should be a perfect square"));
+        e= assertThrows(IllegalArgumentException.class, ()-> SILab2.function(createList("0", "#", "0")));
+        assertTrue(e.getMessage().contains("List length should be a perfect square"));
 
         assertEquals(createList("1","0","1","#","3","#","2","#","2"), SILab2.function(createList("0","0","0","#","0","#","0","#","0")));
 
     }
     @Test
     void everyBranchTest(){
-        RuntimeException ex;
+        IllegalArgumentException e;
 
-        ex = assertThrows(RuntimeException.class, ()->SILab2.function(createList()));
-        assertTrue(ex.getMessage().contains("List length should be greater than 0"));
+        e = assertThrows(IllegalArgumentException.class, ()->SILab2.function(createList()));
+        assertTrue(e.getMessage().contains("List length should be greater than 0"));
 
-        ex= assertThrows(RuntimeException.class, ()-> SILab2.function(createList("0", "#", "0")));
-        assertTrue(ex.getMessage().contains("List length should be a perfect square"));
+        e= assertThrows(IllegalArgumentException.class, ()-> SILab2.function(createList("0", "#", "0")));
+        assertTrue(e.getMessage().contains("List length should be a perfect square"));
 
         assertEquals(createList("1","0","1","#","3","#","2","#","2"), SILab2.function(createList("0","0","0","#","0","#","0","#","0")));
 
